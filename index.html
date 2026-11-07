@@ -461,11 +461,11 @@
     </div>
 
     <script>
-        // FFmpeg.wasm 0.11.6 — mesin dimuat saat diperlukan agar halaman tetap responsif.
+        // FFmpeg.wasm 0.11.6 dipasangkan dengan core resmi 0.11.0 (single-thread) agar API kompatibel.
         const FFmpegLib = window.FFmpeg;
         const ffmpeg = FFmpegLib ? FFmpegLib.createFFmpeg({
             log: false,
-            corePath: 'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js'
+            corePath: 'https://unpkg.com/@ffmpeg/core@0.11.0/dist/ffmpeg-core.js'
         }) : null;
         const fetchFFmpegFile = FFmpegLib ? FFmpegLib.fetchFile : null;
 
